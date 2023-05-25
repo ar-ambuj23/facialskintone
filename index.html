@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facial Skin Tone Estimation</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+  <header>
+    <h1>Facial Skin Tone Estimation</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Abstract</h2>
+      <p>
+        Personalized avatars play a vital role in enhancing the customer's shopping experience by allowing virtual try-on of apparel and accessories. Accurate representation of skin tone on the avatar is crucial as it provides essential cues about product interaction with different complexions. We present a comprehensive 3K-subject dataset and algorithms for accurately estimating and rendering skin tone from selfies captured in the wild. Our dataset comprises 24,000 selfie images captured in diverse environments, meticulously annotated by expert fashion specialists. The annotations include skin tone on the Fitzpatrick scale, lighting amount, and directionality. Unlike existing datasets, ours emphasizes a balanced representation of skin tones, including underrepresented darker complexions. Using a multitask CNN model trained on our dataset, we simultaneously classify illumination conditions and facial skin tones. We develop a skin tone rendering algorithm that accurately maps facial skin pixels to the target Fitzpatrick color. Additionally, we improve a state-of-art shadow removal model with better skin tone preservation, while eliminating facial shadows. Experimental results demonstrate qualitative improvements in avatar skin tone rendering, particularly under challenging lighting conditions. Our work highlights the significance of richly annotated datasets for advancing skin tone estimation. We make our dataset publicly available to facilitate further research and development in this area. Our framework contributes to creating personalized avatars that faithfully represent diverse skin tones, enhancing the shopping experience and promoting inclusivity.
+      </p>
+      <figure style="text-align: center;">
+        <div style="display: flex; justify-content: space-between;">
+            <div style="display: inline-block; margin-right: 20px;">
+                <img src="images/skintone_estimation_architecture.png" alt="Key Findings" width="700">
+                <figcaption><b>Skin tone-lighting estimation model</b> Our model is trained to simultaneously learn lighting amount,
+                    lighting direction, and skin tone color</figcaption>
+            </div>
+            <div style="display: inline-block; margin-left: 20px;">
+                <img src="images/shadow_architecture.png" alt="Key Findings" width="700">
+                <figcaption><b>Shadow removal model</b> Our model undergoes supervised training with a multi-task learning approach,
+                    encompassing depth map, lighting coefficient, and albedo image learning. To ensure accurate skin tone reproduction, we introduce the skin
+                    tone loss and face geometry loss (shown in magenta) alongside the depth loss, lighting loss, and photo-realism losses (shown in green)</figcaption>
+            </div>
+        </div>
+      </figure>
+    </section>
+
+    <section>
+        <h2>Dataset</h2>
+        <p>
+            Datasets used in previous related works lack diversity in
+            lighting conditions and skin tones. To address this gap, we
+            resorted to an unprecedented in-house data collection ef-
+            fort. We employed around 3000 participants (40% males
+            and 60% females) from various race and ethnicity for this
+            task. Dataset link - coming soon!
+        </p>
+      </section>
+    
+    <section>
+      <h2>Methodology</h2>
+      <p>
+        Describe the research methodology or approach you used. Explain the steps involved and any tools, techniques, or
+        data you utilized.
+      </p>
+    </section>
+
+    <section>
+      <h2>Findings</h2>
+      <p>
+        Present the key findings of your research project. Use graphs, charts, or any visual aids to illustrate the
+        results effectively.
+      </p>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        Summarize the main conclusions and outcomes of your research project. Discuss any implications, future
+        possibilities, or recommendations that arise from your findings.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Your Name</p>
+  </footer>
+</body>
+
+</html>
